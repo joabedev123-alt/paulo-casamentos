@@ -1,70 +1,35 @@
-import { Whatsapp, CalendarEvent, Tools, EmojiSmileFill } from "react-bootstrap-icons";
-
-const steps = [
-    {
-        icon: Whatsapp,
-        title: "Contato via WhatsApp",
-        description: "Envie uma mensagem e verifique a disponibilidade para sua data.",
-        number: "01"
-    },
-    {
-        icon: CalendarEvent,
-        title: "Planejamento",
-        description: "Definimos o layout das fotos e os detalhes personalizados.",
-        number: "02"
-    },
-    {
-        icon: Tools,
-        title: "Montagem no Local",
-        description: "Nossa equipe leva e monta toda a estrutura antes do evento.",
-        number: "03"
-    },
-    {
-        icon: EmojiSmileFill,
-        title: "Diversão e Fotos",
-        description: "Seus convidados se divertem e levam as fotos na hora!",
-        number: "04"
-    },
-];
+import { Whatsapp, CalendarCheck, Tools, EmojiSmileFill } from "react-bootstrap-icons";
 
 export function HowItWorks() {
-    return (
-        <section id="como-funciona" className="bg-cinematic-black text-white py-24 px-4 border-t border-white/5 relative overflow-hidden">
-            {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cinematic-yellow/5 rounded-full blur-3xl -z-0" />
+    const steps = [
+        { icon: Whatsapp, label: "Contato", desc: "Verifique sua data" },
+        { icon: CalendarCheck, label: "Planejamento", desc: "Personalize sua arte" },
+        { icon: Tools, label: "Montagem", desc: "Equipe especializada" },
+        { icon: EmojiSmileFill, label: "Diversão", desc: "Fotos ilimitadas" },
+    ];
 
-            <div className="max-w-7xl mx-auto relative z-10">
-                <div className="text-center mb-20">
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-                        Como funciona a <span className="text-cinematic-yellow">Experiência</span>
-                    </h2>
-                    <p className="text-gray-400 max-w-xl mx-auto">
-                        Processo simples e transparente para você não se preocupar com nada.
-                    </p>
+    return (
+        <section className="py-32 bg-cinematic-black overflow-hidden relative">
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="text-center mb-24">
+                    <h2 className="text-4xl font-bold text-white tracking-widest uppercase mb-4">Fluxo do <span className="text-cinematic-yellow">Evento</span></h2>
+                    <div className="w-24 h-1 bg-cinematic-yellow mx-auto" />
                 </div>
 
                 <div className="relative">
-                    {/* Linha Conectora (Desktop) */}
-                    <div className="hidden lg:block absolute top-[60px] left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cinematic-yellow/30 to-transparent -z-10" />
+                    {/* Connecting Line */}
+                    <div className="hidden md:block absolute top-[40px] left-10 right-10 h-[2px] bg-white/10">
+                        <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent via-cinematic-yellow to-transparent opacity-50" />
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
                         {steps.map((step, index) => (
-                            <div key={index} className="flex flex-col items-center text-center group">
-                                <div className="relative mb-8">
-                                    <div className="w-24 h-24 bg-cinematic-black border border-cinematic-yellow/30 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,215,0,0.05)] group-hover:shadow-[0_0_30px_rgba(255,215,0,0.3)] group-hover:border-cinematic-yellow transition-all duration-500 z-10">
-                                        <step.icon className="w-10 h-10 text-cinematic-yellow transform group-hover:scale-110 transition-transform duration-500" />
-                                    </div>
-                                    <div className="absolute -top-2 -right-2 bg-cinematic-yellow text-black font-bold text-xs w-8 h-8 flex items-center justify-center rounded-full shadow-lg">
-                                        {step.number}
-                                    </div>
+                            <div key={index} className="relative group">
+                                <div className="w-20 h-20 mx-auto bg-black border-2 border-white/20 rounded-full flex items-center justify-center mb-8 relative z-10 group-hover:border-cinematic-yellow transition-colors duration-500">
+                                    <step.icon className="w-8 h-8 text-gray-400 group-hover:text-cinematic-yellow transition-colors duration-500" />
                                 </div>
-
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cinematic-yellow transition-colors">
-                                    {step.title}
-                                </h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">
-                                    {step.description}
-                                </p>
+                                <h3 className="text-xl font-bold text-white mb-2 uppercase tracking-wide">{step.label}</h3>
+                                <p className="text-gray-500 text-sm">{step.desc}</p>
                             </div>
                         ))}
                     </div>

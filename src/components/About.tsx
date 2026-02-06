@@ -22,12 +22,12 @@ const slides: ProductSlide[] = [
     {
         title: "Totem Retrô", // Retro Totem
         Badge: "Estilo Vintage", // Vintage Style
-        description: "Charme e tecnologia. Design em madeira que combina perfeitamente com decorações rústicas e boho e traz um visual instagramável.",
+        description: "Charme e tecnologia. Design em madeira que combina perfeitamente com decorações rústicas e ativações de marca com estilo.",
         image: totemRetroImg,
         features: [
             "Design em madeira rústica",
             "Visual Instagramável",
-            "Ideal para casamentos ao ar livre"
+            "Ideal para ações de marketing"
         ]
     },
     {

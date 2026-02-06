@@ -39,10 +39,11 @@ export default {
                     foreground: "hsl(var(--card-foreground))",
                 },
                 cinematic: {
-                    black: "#050505",
-                    yellow: "#FFD700",
-                    glass: "rgba(255, 255, 255, 0.05)",
-                    "glass-hover": "rgba(255, 255, 255, 0.1)",
+                    black: "#0B0B0B", // Deep Black
+                    graphite: "#1A1A1A", // Graphite Surface
+                    yellow: "#FFC300", // Premium Yellow
+                    glass: "rgba(11, 11, 11, 0.8)", // Dark Glass
+                    "glass-hover": "rgba(255, 195, 0, 0.1)", // Yellow Glow
                 },
             },
             borderRadius: {

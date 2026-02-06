@@ -1,51 +1,38 @@
-import { Speedometer2, PrinterFill, HouseDoorFill, PersonBadgeFill } from "react-bootstrap-icons";
+import { Speedometer, PrinterFill, HouseDoorFill, PersonBadge, CpuFill, LayersFill } from "react-bootstrap-icons";
 
-const differentials = [
-    {
-        icon: Speedometer2,
-        title: "Alta Performance",
-        description: "Equipamentos de última geração para captura e impressão em segundos."
-    },
-    {
-        icon: PrinterFill,
-        title: "Impressão Premium",
-        description: "Papel fotográfico de alta qualidade, resistente a água e com durabilidade de anos."
-    },
-    {
-        icon: HouseDoorFill,
-        title: "Cabine Espaçosa",
-        description: "Estrutura confortável que comporta grupos, garantindo a diversão de todos."
-    },
-    {
-        icon: PersonBadgeFill,
-        title: "Operador Especializado",
-        description: "Profissional treinado para auxiliar os convidados durante todo o evento."
-    },
+const items = [
+    { icon: Speedometer, title: "Velocidade", desc: "Impressão em 12s" },
+    { icon: PrinterFill, title: "Qualidade", desc: "Papel fotográfico Lab" },
+    { icon: HouseDoorFill, title: "Estrutura", desc: "Cabines espaçosas" },
+    { icon: PersonBadge, title: "Equipe", desc: "Operadores uniformizados" },
+    { icon: CpuFill, title: "Tecnologia", desc: "Software de última geração" },
+    { icon: LayersFill, title: "Acabamento", desc: "Layouts personalizados" },
 ];
 
 export function Differentials() {
     return (
-        <section className="bg-cinematic-black text-white py-24 px-4 border-t border-white/5">
-            <div className="container mx-auto max-w-7xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-                        Tecnologia e <span className="text-cinematic-yellow">Qualidade</span>
-                    </h2>
-                    <p className="text-gray-400 max-w-xl mx-auto">
-                        Diferenciais que garantem o sucesso do seu evento.
-                    </p>
+        <section id="diferenciais" className="py-24 bg-cinematic-black border-t border-white/5 relative overflow-hidden">
+            {/* Background Grid */}
+            <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-5 pointer-events-none" />
+
+            <div className="container mx-auto px-6">
+                <div className="mb-16 flex items-end justify-between border-b border-white/10 pb-8">
+                    <div>
+                        <span className="text-cinematic-yellow uppercase tracking-widest text-xs font-bold">Specs</span>
+                        <h2 className="text-4xl font-bold text-white mt-2">Diferenciais <br />Técnicos</h2>
+                    </div>
+                    <div className="hidden md:block text-right text-gray-500 text-sm">
+                        <p>Excelência em cada detalhe.</p>
+                        <p>Garantia de satisfação.</p>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {differentials.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center text-center p-6 border border-white/5 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="mb-6 p-4 bg-cinematic-yellow/10 rounded-full text-cinematic-yellow">
-                                <item.icon className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">
-                                {item.description}
-                            </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-white/10 border border-white/10">
+                    {items.map((item, index) => (
+                        <div key={index} className="bg-cinematic-black p-8 hover:bg-[#111] transition-colors group aspect-square flex flex-col items-center justify-center text-center">
+                            <item.icon className="w-8 h-8 text-gray-600 group-hover:text-cinematic-yellow transition-colors mb-4" />
+                            <h3 className="text-white font-bold text-lg mb-1">{item.title}</h3>
+                            <p className="text-gray-500 text-xs">{item.desc}</p>
                         </div>
                     ))}
                 </div>

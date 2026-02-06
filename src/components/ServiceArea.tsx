@@ -1,32 +1,31 @@
-import { GeoAltFill, CheckCircleFill } from "react-bootstrap-icons";
+import { GeoAltFill } from "react-bootstrap-icons";
+
+const cities = ["Umuarama", "Cascavel", "Toledo", "Palotina", "Maringá", "Londrina", "Cianorte"];
 
 export function ServiceArea() {
-    const cities = ["Umuarama", "Cascavel", "Toledo", "Palotina", "Oeste e Noroeste do Paraná"];
-
     return (
-        <section id="area-atuacao" className="bg-cinematic-black text-white py-24 px-4 border-t border-white/5">
-            <div className="container mx-auto max-w-4xl text-center">
-                <div className="inline-flex items-center justify-center p-4 bg-cinematic-yellow/10 rounded-full mb-8 animate-pulse">
-                    <GeoAltFill className="w-8 h-8 text-cinematic-yellow" />
+        <section className="py-24 bg-[#080808] border-t border-white/5">
+            <div className="container mx-auto px-6 text-center">
+                <div className="inline-block p-4 rounded-full bg-white/5 mb-8">
+                    <GeoAltFill className="w-6 h-6 text-cinematic-yellow" />
                 </div>
 
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
-                    Onde <span className="text-cinematic-yellow">Atendemos</span>
+                <h2 className="text-3xl font-bold text-white mb-12">
+                    Atendemos em todo o <span className="text-cinematic-yellow">Paraná</span>
                 </h2>
-                <p className="text-gray-400 mb-12 max-w-xl mx-auto">
-                    Levamos a Cabine Megamix para onde seu sonho acontecer. Confira nossa região de atuação.
-                </p>
 
-                <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
                     {cities.map((city, index) => (
-                        <div
+                        <span
                             key={index}
-                            className="flex items-center gap-2 px-6 py-3 bg-white/5 rounded-full border border-white/10 hover:border-cinematic-yellow hover:text-cinematic-yellow transition-all duration-300 cursor-default group"
+                            className="px-6 py-3 rounded-full bg-cinematic-black border border-white/10 text-gray-400 hover:text-white hover:border-cinematic-yellow transition-all cursor-default text-lg"
                         >
-                            <CheckCircleFill className="w-4 h-4 text-gray-500 group-hover:text-cinematic-yellow transition-colors" />
-                            <span className="font-medium text-lg">{city}</span>
-                        </div>
+                            {city}
+                        </span>
                     ))}
+                    <span className="px-6 py-3 rounded-full bg-cinematic-yellow text-black font-bold border border-cinematic-yellow">
+                        + Região
+                    </span>
                 </div>
             </div>
         </section>

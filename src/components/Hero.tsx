@@ -9,13 +9,13 @@ export function Hero() {
     return (
         <section id="home" className="relative w-full bg-cinematic-black flex flex-col items-center justify-center py-20 pb-40">
             {/* Video Container - Centered, Constrained & No Overlay */}
-            <div className="relative w-full max-w-4xl aspect-video overflow-hidden rounded-2xl shadow-2xl border border-white/5 z-0 mb-12">
+            <div className="relative w-full max-w-3xl aspect-video overflow-hidden rounded-2xl shadow-2xl border border-white/10 z-10 mb-12 bg-black">
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover brightness-105"
                 >
                     <source src={heroVideo} type="video/mp4" />
                 </video>

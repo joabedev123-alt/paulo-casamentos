@@ -10,10 +10,10 @@ export function WhatsAppButton() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 hover:shadow-green-500/30 flex items-center justify-center animate-bounce-slow"
+            className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-3 md:p-4 rounded-full shadow-lg transition-all hover:scale-110 hover:shadow-green-500/30 flex items-center justify-center animate-bounce-slow min-w-[56px] min-h-[56px]"
             aria-label="Falar no WhatsApp"
         >
-            <Whatsapp className="w-8 h-8" />
+            <Whatsapp className="w-6 h-6 md:w-8 md:h-8" />
         </a>
     );
 }

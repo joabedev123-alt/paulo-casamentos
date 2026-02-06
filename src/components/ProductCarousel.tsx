@@ -9,6 +9,7 @@ export type ProductSlide = {
     description: string
     features: string[]
     image: string
+    video?: string
     Badge?: string
 }
 
@@ -51,13 +52,25 @@ export function ProductCarousel({ slides }: ProductCarouselProps) {
                         return (
                             <div key={index} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] min-w-0 pl-4">
                                 <div className="h-full flex flex-col bg-cinematic-black border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-cinematic-yellow/50 transition-all duration-500 group/card">
-                                    {/* Seção da Imagem */}
+                                    {/* Seção da Mídia (Vídeo ou Imagem) */}
                                     <div className="relative h-72 overflow-hidden">
-                                        <img
-                                            src={slide.image}
-                                            alt={slide.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
-                                        />
+                                        {slide.video ? (
+                                            <video
+                                                autoPlay
+                                                loop
+                                                muted
+                                                playsInline
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                                            >
+                                                <source src={slide.video} type="video/mp4" />
+                                            </video>
+                                        ) : (
+                                            <img
+                                                src={slide.image}
+                                                alt={slide.title}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                                            />
+                                        )}
                                         <div className="absolute inset-0 bg-gradient-to-t from-cinematic-black via-transparent to-transparent opacity-80" />
 
                                         {slide.Badge && (

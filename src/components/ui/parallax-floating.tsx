@@ -2,12 +2,12 @@
 
 import {
     createContext,
-    ReactNode,
     useCallback,
     useContext,
     useEffect,
     useRef,
 } from "react"
+import type { ReactNode } from "react"
 import { useAnimationFrame } from "motion/react"
 
 import { cn } from "@/lib/utils"
@@ -122,7 +122,7 @@ export const FloatingElement = ({
 
         context.registerElement(idRef.current, elementRef.current, nonNullDepth)
         return () => context.unregisterElement(idRef.current)
-    }, [depth])
+    }, [depth, context])
 
     return (
         <div

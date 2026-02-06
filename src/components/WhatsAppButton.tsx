@@ -1,4 +1,4 @@
-import { WhatsAppIcon } from "./WhatsAppIcon";
+import { Whatsapp } from "react-bootstrap-icons";
 
 export function WhatsAppButton() {
     const whatsappNumber = "5544984458180";
@@ -10,10 +10,10 @@ export function WhatsAppButton() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 hover:shadow-green-500/30 flex items-center justify-center"
+            className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 hover:shadow-green-500/30 flex items-center justify-center animate-bounce-slow"
             aria-label="Falar no WhatsApp"
         >
-            <WhatsAppIcon className="w-8 h-8" />
+            <Whatsapp className="w-8 h-8" />
         </a>
     );
 }

@@ -38,6 +38,12 @@ export default {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
                 },
+                cinematic: {
+                    black: "#050505",
+                    yellow: "#FFD700",
+                    glass: "rgba(255, 255, 255, 0.05)",
+                    "glass-hover": "rgba(255, 255, 255, 0.1)",
+                },
             },
             borderRadius: {
                 lg: 'var(--radius)',

@@ -3,7 +3,6 @@ import { MediaCarousel } from "./MediaCarousel";
 import { Whatsapp, ChevronDown, ChevronUp } from "react-bootstrap-icons";
 
 // Images & Videos
-import cabineImg from "@/assets/cabine/cabine-main.jpeg";
 import espelhoImg from "@/assets/espelho/espelho magico 01.jpeg";
 import espelhoVideo from "@/assets/espelho/espelho-main.mp4";
 import espelhoVideo2 from "@/assets/espelho/espelho-2.mp4";
@@ -29,33 +28,7 @@ export type ProductSlide = {
 }
 
 const slides: ProductSlide[] = [
-    {
-        title: "Cabine de Fotos", // Photo Booth
-        Badge: "O Clássico", // The Classic
-        description: "A clássica cabine fechada que garante privacidade e diversão. Ideal para grupos de amigos se soltarem nas poses!",
-        image: cabineImg,
-        features: [
-            "Cabine fechada com cortina",
-            "Acessórios divertidos inclusos",
-            "Impressão ilimitada em tirinhas"
-        ]
-    },
-    {
-        title: "Totem Retrô", // Retro Totem
-        Badge: "Estilo Vintage", // Vintage Style
-        description: "Charme e tecnologia. Design em madeira que combina perfeitamente com decorações rústicas e ativações de marca com estilo.",
-        image: totemRetroImg,
-        mediaList: [
-            { type: 'video', src: totemRetroVideo },
-            { type: 'video', src: totemRetroVideo2 },
-            { type: 'image', src: totemRetroImgExtra },
-        ],
-        features: [
-            "Design em madeira rústica",
-            "Visual Instagramável",
-            "Ideal para ações de marketing"
-        ]
-    },
+
     {
         title: "Espelho Mágico", // Magic Mirror
         Badge: "Novidade Exclusiva", // Exclusive New
@@ -215,7 +188,7 @@ export function ModelsSection() {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-cinematic-yellow/5 rounded-full blur-3xl -z-0" />
 
                     {/* Grid Layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10 items-start">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10 items-start justify-items-center">
                         {slides.map((slide, index) => (
                             <ModelCard key={index} slide={slide} whatsappNumber={whatsappNumber} />
                         ))}

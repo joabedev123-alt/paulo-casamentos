@@ -2,12 +2,12 @@ import { StarFill } from "react-bootstrap-icons";
 
 export function WhoWeAre() {
     return (
-        <section id="quem-somos" className="relative py-24 bg-cinematic-black overflow-hidden">
+        <section id="quem-somos" className="relative py-16 md:py-24 bg-cinematic-black overflow-hidden">
             {/* Background Texture */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
 
             <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                     {/* Content */}
                     <div className="space-y-8 animate-fade-in-right">
@@ -23,7 +23,7 @@ export function WhoWeAre() {
 
                         <div className="space-y-6 text-gray-400 text-lg font-light leading-relaxed">
                             <p>
-                                <strong className="text-white font-medium">Somos a Cabine Megamix.</strong> Desde 2014 no mercado de entretenimento em eventos. Sempre antenados em novidades para levar até você o que existe de mais criativo e inovador.
+                                <strong className="text-white font-medium">Somos uma Cabine Megamix.</strong> Desde 2014 no mercado de entretenimento em eventos. Sempre antenados em novidades para levar até você o que existe de mais criativo e inovador.
                             </p>
                             <p className="border-l-2 border-cinematic-yellow pl-6">
                                 São mais de <strong className="text-cinematic-yellow">500 ativações</strong> em casamentos, aniversários e eventos corporativos. Transformamos momentos em experiências memoráveis.

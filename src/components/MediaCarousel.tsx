@@ -60,13 +60,14 @@ export function MediaCarousel({ media, altTitle }: MediaCarouselProps) {
             </div>
 
             {/* Pagination Dots */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
                 {media.map((_, index) => (
                     <button
                         key={index}
-                        className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex ? 'bg-cinematic-yellow w-6' : 'bg-white/50 w-1.5 hover:bg-white'
+                        className={`h-2 md:h-1.5 rounded-full transition-all duration-300 min-w-[24px] min-h-[24px] md:min-w-0 md:min-h-0 flex items-center justify-center ${index === selectedIndex ? 'bg-cinematic-yellow w-8 md:w-6' : 'bg-white/50 w-2 md:w-1.5 hover:bg-white'
                             }`}
                         onClick={() => emblaApi && emblaApi.scrollTo(index)}
+                        aria-label={`Ir para slide ${index + 1}`}
                     />
                 ))}
             </div>

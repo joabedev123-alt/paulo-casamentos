@@ -11,15 +11,15 @@ const items = [
 
 export function Differentials() {
     return (
-        <section id="diferenciais" className="py-24 bg-cinematic-black border-t border-white/5 relative overflow-hidden">
+        <section id="diferenciais" className="py-16 md:py-24 bg-cinematic-black border-t border-white/5 relative overflow-hidden">
             {/* Background Grid */}
             <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-5 pointer-events-none" />
 
-            <div className="container mx-auto px-6">
-                <div className="mb-16 flex items-end justify-between border-b border-white/10 pb-8">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="mb-12 md:mb-16 flex flex-col md:flex-row items-start md:items-end justify-between border-b border-white/10 pb-6 md:pb-8 gap-4">
                     <div>
                         <span className="text-cinematic-yellow uppercase tracking-widest text-xs font-bold">Specs</span>
-                        <h2 className="text-4xl font-bold text-white mt-2">Diferenciais <br />Técnicos</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">Diferenciais <br />Técnicos</h2>
                     </div>
                     <div className="hidden md:block text-right text-gray-500 text-sm">
                         <p>Excelência em cada detalhe.</p>

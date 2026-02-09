@@ -6,22 +6,22 @@ export function WhoWeAre() {
             {/* Background Texture */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
 
-            <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
 
                     {/* Content */}
-                    <div className="space-y-8 animate-fade-in-right">
+                    <div className="space-y-6 md:space-y-8 animate-fade-in-right">
                         <div className="inline-flex items-center gap-2 text-cinematic-yellow border border-cinematic-yellow/20 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-cinematic-yellow/5">
                             <StarFill className="w-3 h-3" />
                             <span>Desde 2014</span>
                         </div>
 
-                        <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                             Criatividade e Inovação <br />
                             <span className="text-gray-500">em cada detalhe.</span>
                         </h2>
 
-                        <div className="space-y-6 text-gray-400 text-lg font-light leading-relaxed">
+                        <div className="space-y-4 md:space-y-6 text-gray-400 text-base md:text-lg font-light leading-relaxed">
                             <p>
                                 <strong className="text-white font-medium">Somos uma Cabine Megamix.</strong> Desde 2014 no mercado de entretenimento em eventos. Sempre antenados em novidades para levar até você o que existe de mais criativo e inovador.
                             </p>

@@ -25,18 +25,18 @@ const benefits = [
 
 export function Benefits() {
     return (
-        <section id="beneficios" className="bg-cinematic-black text-white py-24 px-4">
+        <section id="beneficios" className="bg-cinematic-black text-white py-16 md:py-24 px-4">
             <div className="container mx-auto max-w-7xl">
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                <div className="text-center mb-12 md:mb-16 space-y-3 md:space-y-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
                         Por que a <span className="text-cinematic-yellow">Cabine Megamix?</span>
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto px-4">
                         Elevamos o nível do entretenimento no seu evento. Veja o que torna nossa experiência única.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {benefits.map((benefit, index) => (
                         <div
                             key={index}

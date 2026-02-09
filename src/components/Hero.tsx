@@ -75,26 +75,26 @@ export function Hero() {
 
 
             {/* Content */}
-            <div className="relative z-20 container mx-auto px-4 md:px-6 text-center py-8 md:py-0">
-                <div className="inline-block mb-4 md:mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-                    <span className="py-2 px-3 md:px-4 border border-white/20 rounded-full text-[10px] md:text-xs font-medium tracking-[0.2em] text-gray-300 uppercase bg-white/5 backdrop-blur-sm">
+            <div className="relative z-20 container mx-auto px-4 md:px-6 text-center py-4 md:py-0">
+                <div className="inline-block mb-3 md:mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
+                    <span className="py-1.5 px-3 md:px-4 border border-white/20 rounded-full text-[10px] md:text-xs font-medium tracking-[0.2em] text-gray-300 uppercase bg-white/5 backdrop-blur-sm">
                         Premium Photo Booths
                     </span>
                 </div>
 
                 {/* Logo Principal */}
-                <div className="mb-8 md:mb-12 mt-12 md:mt-24 relative z-50">
+                <div className="mb-6 md:mb-12 mt-8 md:mt-24 relative z-50">
                     <motion.img
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         src="/logo-megamix.png"
                         alt="Cabine Megamix Logo"
-                        className="w-full max-w-sm md:max-w-xl lg:max-w-3xl mx-auto h-auto drop-shadow-2xl"
+                        className="w-full max-w-xs md:max-w-xl lg:max-w-3xl mx-auto h-auto drop-shadow-2xl"
                     />
                 </div>
 
-                <p className="max-w-2xl mx-auto text-base md:text-lg lg:text-xl text-gray-400 font-light mb-8 md:mb-12 px-4 animate-fade-in opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
+                <p className="max-w-2xl mx-auto text-sm md:text-lg lg:text-xl text-gray-400 font-light mb-6 md:mb-12 px-4 animate-fade-in opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
                     Elevamos o nível do seu evento. Tecnologia e experiências imersivas para casamentos, festas e eventos corporativos.
                 </p>
 

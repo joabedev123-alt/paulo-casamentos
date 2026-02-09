@@ -13,6 +13,9 @@ import totemImg2 from "@/assets/toten/totem-self-2.jpeg";
 import totemImg3 from "@/assets/toten/totem-self-3.jpeg";
 import foneRetroImg from "@/assets/foneretro/fone-retro-1.jpeg";
 import foneRetroImg2 from "@/assets/foneretro/fone-retro-2.jpeg";
+import totemRetroImg from "@/assets/totenretro/totem-retro-3.jpeg";
+import totemRetroVideo from "@/assets/totenretro/totem-retro-main.mp4";
+import totemRetroVideo2 from "@/assets/totenretro/totem-retro-2.mp4";
 
 export type ProductSlide = {
     title: string
@@ -57,6 +60,22 @@ const slides: ProductSlide[] = [
             "Design fino e elegante",
             "Iluminação profissional (Ring Light)",
             "Ideal para espaços compactos"
+        ]
+    },
+    {
+        title: "Totem Retrô", // Retro Totem
+        Badge: "Charme Vintage", // Vintage Charm
+        description: "Nostalgia encontra modernidade. Design retrô elegante que transporta seus convidados no tempo, combinando o charme do passado com tecnologia de ponta para fotos memoráveis.",
+        image: totemRetroImg,
+        mediaList: [
+            { type: 'video', src: totemRetroVideo },
+            { type: 'video', src: totemRetroVideo2 },
+            { type: 'image', src: totemRetroImg },
+        ],
+        features: [
+            "Estética vintage sofisticada",
+            "Tecnologia moderna de captura",
+            "Perfeito para eventos temáticos"
         ]
     },
     {
@@ -170,23 +189,23 @@ export function ModelsSection() {
     const whatsappNumber = "5544984458180";
 
     return (
-        <section id="modelos" className="bg-cinematic-black text-white py-24 px-4 border-t border-white/5">
+        <section id="modelos" className="bg-cinematic-black text-white py-16 md:py-24 px-4 border-t border-white/5">
             <div className="container mx-auto max-w-7xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+                <div className="text-center mb-12 md:mb-16">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 md:mb-4 text-white">
                         Nossos <span className="text-cinematic-yellow">Modelos</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                    <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg px-4">
                         Escolha a opção perfeita para o estilo do seu evento.
                     </p>
                 </div>
 
                 <div className="relative">
                     {/* Glow Effect */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-cinematic-yellow/5 rounded-full blur-3xl -z-0" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[300px] md:h-[400px] bg-cinematic-yellow/5 rounded-full blur-3xl -z-0" />
 
                     {/* Grid Layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10 items-start justify-items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10 items-start justify-items-center">
                         {slides.map((slide, index) => (
                             <ModelCard key={index} slide={slide} whatsappNumber={whatsappNumber} />
                         ))}

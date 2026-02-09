@@ -25,18 +25,18 @@ const experiences = [
 
 export function Experience() {
     return (
-        <section id="experiencia" className="py-24 bg-cinematic-black relative">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section id="experiencia" className="py-16 md:py-24 bg-cinematic-black relative">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="text-center mb-12 md:mb-20">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
                         A Experiência <span className="text-cinematic-yellow">Megamix</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
+                    <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg font-light px-4">
                         Elevamos o padrão do entretenimento. Detalhes pensados para impressionar.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {experiences.map((item, index) => (
                         <div
                             key={index}

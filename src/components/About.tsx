@@ -8,13 +8,9 @@ import espelhoImg from "@/assets/espelho/espelho magico 01.jpeg";
 import espelhoVideo from "@/assets/espelho/espelho-main.mp4";
 import espelhoVideo2 from "@/assets/espelho/espelho-2.mp4";
 import espelhoImg3 from "@/assets/espelho/espelho-3.jpeg";
-import totemRetroVideo from "@/assets/totenretro/totem-retro-main.mp4";
-import totemRetroVideo2 from "@/assets/totenretro/totem-retro-2.mp4";
-import totemRetroImgExtra from "@/assets/totenretro/totem-retro-3.jpeg";
 import totemImg from "@/assets/toten/totem-self-1.jpeg";
 import totemImg2 from "@/assets/toten/totem-self-2.jpeg";
 import totemImg3 from "@/assets/toten/totem-self-3.jpeg";
-import totemRetroImg from "@/assets/totenretro/WhatsApp Image 2026-02-05 at 16.32.45.jpeg";
 import foneRetroImg from "@/assets/foneretro/fone-retro-1.jpeg";
 import foneRetroImg2 from "@/assets/foneretro/fone-retro-2.jpeg";
 

@@ -3,7 +3,7 @@ import { MediaCarousel } from "./MediaCarousel";
 import { Whatsapp, ChevronDown, ChevronUp } from "react-bootstrap-icons";
 
 // Images & Videos
-import cabineImg from "@/assets/cabine/cabine-main.jpeg";
+
 import espelhoImg from "@/assets/espelho/espelho magico 01.jpeg";
 import espelhoVideo from "@/assets/espelho/espelho-main.mp4";
 import espelhoVideo2 from "@/assets/espelho/espelho-2.mp4";
@@ -25,17 +25,7 @@ export type ProductSlide = {
 }
 
 const slides: ProductSlide[] = [
-    {
-        title: "Cabine de Fotos",
-        Badge: "O Clássico",
-        description: "A verdadeira experiência da cabine fotográfica. Fechada, privativa e com aquela nostalgia que todo mundo ama.",
-        image: cabineImg,
-        features: [
-            "Privacidade total",
-            "Fotos ilimitadas",
-            "Acessórios divertidos"
-        ]
-    },
+
 
     {
         title: "Espelho Mágico", // Magic Mirror
